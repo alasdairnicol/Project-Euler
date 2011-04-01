@@ -24,7 +24,7 @@ def next_prime():
                 # candidate is not prime
                 break
         # increase the candidate by 2
-        # (only test odd primes)
+        # (only test odd numbers)
         candidate += 2
 
 def solution():
