@@ -7,19 +7,21 @@ If we list all the natural numbers below 10 that are multiples of 3 or 5, we get
 
 Find the sum of all the multiples of 3 or 5 below 1000.
 """
+def sum_divisible_by(n, max_val=999):
+    """
+    Returns the sum of all numbers less than or equal to max_val that
+    are divisible by n.
+    """
+    return n * (max_val/n) * (max_val/n + 1) / 2
 
 def solution():
     """
-    Loops through all numbers from 1 to 999.
-
-    Adds number to total if x is divisible by 3 or 5
+    Add the sum of all numbers less than 1000 that are divisible by 3
+    to the sum of all numbers less 1000 that are divisible by
+    5. Subtract the sum of all numbers less than 1000 that are
+    divisible by 15 so that we do not count those numbers twice.
     """
-    total = 0
-    for x in xrange(1000):
-        if not x % 3 or not x % 5:
-            total += x
-
-    return total
+    return sum_divisible_by(3) + sum_divisible_by(5) - sum_divisible_by(15)
 
 if __name__ == "__main__":
     print solution()
