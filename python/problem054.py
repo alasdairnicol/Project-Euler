@@ -230,7 +230,7 @@ class Hand(object):
         
 
 class Player(object):
-    hand = 0
+    hand = None
     def __init__(self):
         self.hands_won = 0
 
