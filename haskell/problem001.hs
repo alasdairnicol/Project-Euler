@@ -10,4 +10,4 @@
 main = putStrLn (show problem_1)
 
 problem_1 :: Integer
-problem_1 = sum [x |x <- [1..999], x `mod` 3 == 0 || x `mod` 5 ==0]
+problem_1 = sum [x |x <- [1..999], x `mod` 3 == 0 || x `mod` 5 == 0]
