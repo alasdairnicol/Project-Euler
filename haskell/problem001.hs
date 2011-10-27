@@ -7,13 +7,7 @@
 --
 -- Find the sum of all the multiples of 3 or 5 below 1000.
 
-main = putStrLn (show solution)
+main = putStrLn (show problem_1)
 
-divByX :: (Integral a) => a -> a -> Bool
-divByX x n = n `mod` x == 0
-
-divBy3 = divByX 3
-divBy5 = divByX 5
-
-solution :: Integer
-solution = sum [x |x <- [1..999], divBy3 x || divBy5 x]
+problem_1 :: Integer
+problem_1 = sum [x |x <- [1..999], x `mod` 3 == 0 || x `mod` 5 ==0]
